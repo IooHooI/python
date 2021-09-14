@@ -4,52 +4,26 @@ def task_1():
         242.2424,
         "wqefwfqewfwq",
         True,
-        [
-            12,
-            3,
-            12,
-            3,
-            1
-        ],
-        (1,
-            2,
-            3),
-        {
-            (1, 1): (1, 1),
-            (2, 2): (2, 2),
-            (3, 3): (3, 3),
-            (4, 4): (4, 4)
-        },
-        {
-            1,
-            2,
-            3
-        },
-        frozenset({
-            1,
-            2,
-            3
-        })
+        [12, 3, 12, 3, 1],
+        (1, 2, 3),
+        {(1, 1): (1, 1), (2, 2): (2, 2), (3, 3): (3, 3), (4, 4): (4, 4)},
+        {1, 2, 3},
+        frozenset({1, 2, 3})
     ]
 
     for item in a_list:
-        print(
-            type(item)
-        )
+        print(type(item))
 
 
 def task_2():
     print("Введите количество элементов в списке:")
-
     n = int(input())
-
     a_list = [None] * n
 
     print("Введите элементы списка:")
 
     for i in list(range(n)):
         curr = input()
-
         a_list[i] = curr
 
     print(a_list)
@@ -62,16 +36,14 @@ def task_2():
 
 
 def task_3():
+    print("Введите число от 1 до 12:")
+    n = int(input())
     seasons = {
         "Зима": [12, 1, 2],
         "Весна": [3, 4, 5],
         "Лето": [6, 7, 8],
         "Осень": [9, 10, 11]
     }
-
-    print("Введите число от 1 до 12:")
-
-    n = int(input())
 
     for k, v in seasons.items():
         if n in v:
@@ -83,9 +55,7 @@ def task_3():
 
 def task_4():
     print("Введите строку из нескольких слов:")
-
     an_str = input()
-
     sub_strings = an_str.split()
 
     for i, sub_string in enumerate(sub_strings):
@@ -94,14 +64,12 @@ def task_4():
 
 def task_5():
     print("Введите количество элементов в рейтинге:")
-
     n = int(input())
 
     if n > 0:
         a_rating_list = []
 
         print("Введите элементы рейтинга:")
-
         a_rating_list.append(int(input()))
 
         print(a_rating_list, "Осталось ввести: {}".format(n - 1))
@@ -119,28 +87,22 @@ def task_5():
 
 
 def task_6():
-    structure = []
-
     print("Введите количество товаров:")
-
     n = int(input())
+    structure = []
 
     if n > 0:
         for i in range(n):
             print("Введите название товара:")
-
             name = input()
 
             print("Введите цену товара:")
-
             price = float(input())
 
             print("Введите количество экземпляров товара:")
-
             count = int(input())
 
             print("Введите единицу измерения:")
-
             unit_of_measure = input()
 
             curr_item_dict = {
@@ -156,12 +118,9 @@ def task_6():
             structure.append((i + 1, curr_item_dict))
 
         for item in structure:
-            print(
-                item
-            )
+            print(item)
 
         print()
-
         analytics_results = {}
 
         for item in structure:
@@ -172,10 +131,7 @@ def task_6():
                     analytics_results[k] = [v]
 
         for k, v in analytics_results.items():
-            print(
-                k,
-                v
-            )
+            print(k, v)
 
 
 if __name__ == "__main__":
