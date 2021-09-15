@@ -13,11 +13,11 @@ def task():
     total_seconds = check(total_seconds)
 
     if total_seconds is not None:
-        hours = total_seconds // 3600
-        minutes = total_seconds % 3600 // 60
-        seconds = total_seconds % 60
+        hours = str(total_seconds // 3600)
+        minutes = str(total_seconds % 3600 // 60)
+        seconds = str(total_seconds % 60)
 
-        print("{}:{}:{}".format(foo(hours), foo(minutes), foo(seconds)))
+        print("{}:{}:{}".format(hours.zfill(2), minutes.zfill(2), seconds.zfill(2)))
     else:
         print("Что-то не так. Я пошел грустить.")
         exit(1)
