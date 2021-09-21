@@ -1,10 +1,3 @@
-def check(var):
-    if var.isdigit():
-        return int(var)
-    else:
-        return None
-
-
 def isfloat(value):
     try:
         float(value)
